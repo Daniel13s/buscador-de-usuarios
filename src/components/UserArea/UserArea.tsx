@@ -1,6 +1,6 @@
 import "./UserArea.css";
 import { useDispatch, useSelector } from "react-redux";
-import type { AppDispatch, RootState } from "../../redux/store";
+import type { AppDispatch } from "../../redux/store";
 import { useEffect } from "react";
 import { fetchUsers, type User } from "../../redux/userReducer/reducer";
 import type { RootReducer } from "../../redux/rootReducer";
@@ -10,7 +10,7 @@ function UserArea() {
   const dispatch = useDispatch<AppDispatch>()
   const navigate = useNavigate()
 
-  const { data: users, loading, error } = useSelector((state: RootState) => state.userReducer);
+  const { data: users, loading, error } = useSelector((state: RootReducer) => state.userReducer);
   const {theme} = useSelector((rootReducer:RootReducer) => rootReducer.themeReducer)
 
   useEffect(() => {

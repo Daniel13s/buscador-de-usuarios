@@ -1,6 +1,6 @@
 # Buscador de usuários
 
-[![Node.js](https://img.shields.io/badge/Node.js-v16%2B-green)](https://nodejs.org/)  [![React](https://img.shields.io/badge/React-Vite-blue)](https://vitejs.dev/)  [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue)](https://www.typescriptlang.org/)  [![License](https://img.shields.io/badge/license-MIT-purple)](https://chatgpt.com/g/g-QNQZOPJ63-readme/c/LICENSE)
+[![Node.js](https://img.shields.io/badge/Node.js-v16%2B-green)](https://nodejs.org/)  [![React](https://img.shields.io/badge/React-Vite-blue)](https://vitejs.dev/)  [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue)](https://www.typescriptlang.org/)  [![License](https://img.shields.io/badge/license-MIT-purple)](https://github.com/Daniel13s/buscador-de-usuarios/blob/main/LICENSE)
 
 O Buscador de usuários é uma ferramenta que utiliza de uma API publica, e oficial do GitHub. Ela foi desenvolvida para praticar a integração de API's em meus projetos.
 

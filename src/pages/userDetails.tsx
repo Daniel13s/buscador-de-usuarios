@@ -24,7 +24,6 @@ function UserDetails() {
 
   const name = searchParams.get("name");
   const avatarUrl = searchParams.get("user-image");
-  const htmlUrl = searchParams.get('htmlurl')
 
   useEffect(() => {
     dispatch(fetchRepos(name!));

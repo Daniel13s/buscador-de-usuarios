@@ -3,6 +3,7 @@ import { http, HttpResponse } from "msw"
 import { setupServer } from "msw/node"
 import UserArea from "./UserArea"
 
+
 describe("UserArea component", () => {
     const handlers = [
         http.get("https://api.github.com/users", () => {
