@@ -29,7 +29,7 @@ function App() {
     if (search.trim().length === 0) {
       dispatch(fetchUsers());
     } else {
-      const searchUser = users.filter((user: User) => user.login.includes(search)
+      const searchUser = users.filter((user: User) => user.login.toLowerCase().includes(search.toLowerCase())
       );
 
       dispatch({
