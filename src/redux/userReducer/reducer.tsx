@@ -15,7 +15,7 @@ export type Repos = {
   name: string;
   avatar_url: string;
   html_url: string
-  owner: User;
+  description?: string;
 };
 
 // Tipo do estado

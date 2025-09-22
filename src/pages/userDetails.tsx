@@ -58,6 +58,10 @@ function UserDetails() {
         </h2>
         <Line />
         <table id="tableD">
+          <tr>
+            <th>Nome</th>
+            <th>Owner</th>
+          </tr>
           {loading ? (
             <p>Loading...</p>
           ) : error ? (
@@ -70,7 +74,7 @@ function UserDetails() {
                     <h3>{repo.name}</h3>
                   </td>
                   <td>
-                    <p>{repo.owner.login}</p>
+                    <p>{name}</p>
                   </td>
                 </tr>
               </a>
