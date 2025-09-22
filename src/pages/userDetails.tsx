@@ -58,7 +58,7 @@ function UserDetails() {
         </h2>
         <Line />
         <table id="tableD">
-          <tr>
+          <tr style={{color: theme === "light" ? "black" : "white"}}>
             <th>Nome</th>
             <th>Owner</th>
           </tr>
@@ -69,7 +69,7 @@ function UserDetails() {
           ) : (
             repos.map((repo: Repos) => (
               <a href={repo.html_url} target="_blanck">
-                <tr style={{color: theme === "light" ? "white" : "black"}} className={theme === "light" ? "light" : "dark"}>
+                <tr className={theme === "light" ? "light" : "dark"}>
                   <td>
                     <h3>{repo.name}</h3>
                   </td>
