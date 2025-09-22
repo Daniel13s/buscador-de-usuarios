@@ -21,23 +21,18 @@ function App() {
   );
 
   const dispatch = useDispatch<AppDispatch>();
-  useEffect(() => {
-    dispatch(fetchUsers())
-  }, [dispatch, search])
 
-  function searchUsers() {
-    if (search.trim().length === 0) {
-      dispatch(fetchUsers());
+
+ useEffect(() => {
+    if(search.trim().length === 0) {
+      dispatch(fetchUsers())
     } else {
-      const searchUser = users.filter((user: User) => user.login.toLowerCase().includes(search.toLowerCase())
-      );
-
       dispatch({
-        type: "SEARCH_USERS",
-        payload: searchUser,
-      });
+      type: "SEARCH_USERS",
+      payload: search
+    })
     }
-  }
+ }, [dispatch, search])
 
   function toggleTheme() {
     dispatch({
@@ -76,12 +71,6 @@ function App() {
               placeholder="Digite o nome de usuário"
               aria-label="user-name"
             />
-            <button
-              className={theme === "light" ? "light" : "dark"}
-              onClick={searchUsers}
-            >
-              <Search />
-            </button>
           </article>
           <Line />
           <UserArea />

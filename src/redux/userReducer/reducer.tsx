@@ -1,5 +1,6 @@
 import axios from "axios";
 import type { AppDispatch } from "../store";
+import { data } from "react-router-dom";
 
 // Tipo do usuário
 export type User = {
@@ -53,7 +54,9 @@ export function userReducer(state = initialState, action: any): UserState {
     case FETCH_USERS_FAILURE:
       return { ...state, loading: false, error: action.payload };
     case SEARCH_USERS:
-      return { ...state, loading: false, error: null, data: action.payload };
+      const search: string = action.payload
+      const searchUser: User[] = state.data.filter((user: User) => user.login.toLowerCase().includes(search.toLowerCase()));
+      return { ...state, loading: false, error: null, data: searchUser };
     case FETCH_REPOS_REQUEST:
       return { ...state, loading: true, error: null };
     case FETCH_REPOS_SUCCESS:
