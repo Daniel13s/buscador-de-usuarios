@@ -1,6 +1,5 @@
 import axios from "axios";
 import type { AppDispatch } from "../store";
-import { data } from "react-router-dom";
 
 // Tipo do usuário
 export type User = {

@@ -4,18 +4,15 @@ import logowhite from "./assets/github-mark-white.svg";
 import "./App.css";
 import Line from "./components/Line/Line";
 import UserArea from "./components/UserArea/UserArea";
-import { Moon, Search, Sun } from "lucide-react";
+import { Moon, Sun } from "lucide-react";
 import { useDispatch, useSelector } from "react-redux";
 import type { RootReducer } from "./redux/rootReducer";
-import { fetchUsers, type User } from "./redux/userReducer/reducer";
+import { fetchUsers } from "./redux/userReducer/reducer";
 import type { AppDispatch } from "./redux/store";
 
 function App() {
   const [search, setSearch] = useState<string>("");
 
-  const { data: users } = useSelector(
-    (state: RootReducer) => state.userReducer
-  );
   const { theme } = useSelector(
     (rootReducer: RootReducer) => rootReducer.themeReducer
   );
